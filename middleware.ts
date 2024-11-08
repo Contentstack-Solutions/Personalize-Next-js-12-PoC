@@ -25,5 +25,7 @@ export default async function middleware(request: NextRequest) {
 
   await Personalize.addStateToResponse(response)
 
+  console.log('EDGE FUNCTION CONSOLE LOG: ', response.url)
+
   return response;
 }
